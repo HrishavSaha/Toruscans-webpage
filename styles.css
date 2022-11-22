@@ -1,18 +1,18 @@
 @font-face {
     font-family: "barlowCondensed";
-    src: url(../Toruscans-webpage/fonts/Barlow_Condensed/BarlowCondensed-Regular.ttf);
+    src: url(fonts/Barlow_Condensed/BarlowCondensed-Regular.ttf);
     font-style: normal;
     font-weight: 400;
 }
 @font-face {
     font-family: "barlowCondensed";
-    src: url(../Toruscans-webpage/fonts/Barlow_Condensed/BarlowCondensed-BoldItalic.ttf);
+    src: url(fonts/Barlow_Condensed/BarlowCondensed-BoldItalic.ttf);
     font-style:italic;
     font-weight: 700;
 }
 @font-face {
     font-family: "barlowCondensed";
-    src: url(../Toruscans-webpage/fonts/Barlow_Condensed/BarlowCondensed-Light.ttf);
+    src: url(fonts/Barlow_Condensed/BarlowCondensed-Light.ttf);
     font-style:normal;
     font-weight: 300;
 }
