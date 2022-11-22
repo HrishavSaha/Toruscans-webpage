@@ -1,0 +1,142 @@
+@font-face {
+    font-family: "barlowCondensed";
+    src: url(fonts/Barlow_Condensed/BarlowCondensed-Regular.ttf);
+    font-style: normal;
+    font-weight: 400;
+}
+@font-face {
+    font-family: "barlowCondensed";
+    src: url(fonts/Barlow_Condensed/BarlowCondensed-BoldItalic.ttf);
+    font-style:italic;
+    font-weight: 700;
+}
+@font-face {
+    font-family: "barlowCondensed";
+    src: url(fonts/Barlow_Condensed/BarlowCondensed-Light.ttf);
+    font-style:normal;
+    font-weight: 300;
+}
+*{
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+body{
+    margin:0;
+    padding:0;
+}
+body,
+header,
+section{
+    background-color:rgb(5, 5, 5);
+}
+nav{
+    display: flex;
+    width:100%;
+    padding:7px 15px;
+    transition: background-color 0.2s linear;
+    background-color: rgb(29, 29, 29);
+}
+nav:hover{
+    background-color: rgb(66, 66, 66);
+}
+.nav-div{
+    font-family: barlowCondensed;
+    font-weight: 400;
+    font-size: 25px;
+}
+.nav-div-1{
+    display: flex;
+    flex-grow:1;
+    gap:15px;
+}
+.nav-div-2{
+    flex-basis: 0px;
+}
+.nav-items{
+    text-decoration: none;
+    color:white;
+    transition: color 0.15s linear;
+}
+.nav-items:hover{
+    color:rgb(253, 56, 72);
+}
+#nav-home,
+.nav-div-1{
+    border-right: 2px solid rgb(29, 29, 29);
+}
+#nav-home{
+    padding-right: 15px;
+}
+.nav-profile{
+    padding-left: 15px;
+}
+.header-text{
+    padding: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: "barlowCondensed";
+    font-style:italic;
+    font-weight: 700;
+    font-size: 17vw;
+    line-height: 15vw;
+}
+.word-1{
+    color: rgb(253, 56, 72);
+}
+.word-2{
+    color: white;
+}
+.search{
+    background-color: rgb(29, 29, 29);
+    padding: 10px 10px;
+}
+.search i{
+    position: absolute;
+    padding:8px;
+    font-size: 15px;
+}
+.search input{
+    padding:3px;
+    outline: none;
+    font-family: barlowCondensed;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    background-color: rgb(66, 66, 66);
+    border:none;
+    border-radius: 8px;
+    text-indent: 25px;
+}
+.search i,
+.search input{
+    margin-left: 0px;
+    color: white;
+}
+section{
+    color: aliceblue;
+    display: flex;
+    width: 100%;
+}
+.main-section{
+    flex-grow: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+}
+.card{
+    flex-basis: 200px;
+    background-color: rgb(177, 177, 177);
+    margin:15px;
+    width:200px;
+    height:300px;
+}
+footer{
+    background-color: rgb(29, 29, 29);
+    padding: 5px;
+    font-family: barlowCondensed;
+    font-weight: 300;
+    font-size: 20px;
+    color: rgb(138, 138, 138);
+    text-align: center;
+}
