@@ -1,0 +1,452 @@
+/* FONT DECLARATIONS */
+@font-face {
+    font-family: "barlowCondensed";
+    src: url(../fonts/Barlow-Condensed/BarlowCondensed-Regular.ttf);
+    font-style: normal;
+    font-weight: 400;
+}
+@font-face {
+    font-family: "barlowCondensed";
+    src: url(../fonts/Barlow-Condensed/BarlowCondensed-BoldItalic.ttf);
+    font-style:italic;
+    font-weight: 700;
+}
+@font-face {
+    font-family: "barlowCondensed";
+    src: url(../fonts/Barlow-Condensed/BarlowCondensed-Light.ttf);
+    font-style:normal;
+    font-weight: 300;
+}
+
+/* UNIVERSAL STYLING */
+*{
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+body{
+    margin:0;
+    padding:0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+body,
+header,
+section{
+    background-color:rgb(5, 5, 5);
+}
+/* INDEX.HTML STYLING */
+header.header{
+    background-image: url("../assets/bg.jpg");
+    background-size: 100%;
+}
+nav{
+    display: flex;
+    width:100%;
+    padding:7px 15px;
+    transition: background 0.2s linear;
+    background: rgba(29, 29, 29, 0.7);
+}
+nav:hover{
+    background: rgba(66, 66, 66, 0.8);
+}
+.nav-div{
+    font-family: barlowCondensed;
+    font-weight: 400;
+    font-size: 25px;
+}
+.nav-div-1{
+    display: flex;
+    flex-grow:1;
+    gap:15px;
+}
+.nav-div-2{
+    flex-basis: auto;
+}
+#nav-home,
+.nav-div-1{
+    border-right: 2px solid rgb(29, 29, 29);
+}
+#nav-home{
+    padding-right: 15px;
+}
+#nav-profile{
+    padding-left: 15px;
+}
+.nav-items{
+    text-decoration: none;
+    color:white;
+    transition: color 0.15s linear;
+}
+.nav-items:hover{
+    color:rgb(253, 56, 72);
+}
+
+
+.header-text{
+    padding: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: "barlowCondensed";
+    font-style:italic;
+    font-weight: 700;
+    font-size: 20vw;
+    line-height: 16vw;
+}
+.word-1{
+    color: rgb(253, 56, 72);
+}
+.word-2{
+    color: white;
+}
+
+
+.search{
+    background-color: rgb(29, 29, 29);
+    padding: 10px 10px;
+    z-index: 20;
+}
+.search i{
+    position: absolute;
+    padding:8px;
+    font-size: 15px;
+}
+.search input{
+    padding:3px;
+    outline: none;
+    font-family: barlowCondensed;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    background-color: rgb(66, 66, 66);
+    border:none;
+    border-radius: 8px;
+    text-indent: 25px;
+}
+.search i,
+.search input{
+    margin-left: 0px;
+    color: white;
+    z-index: 20;
+}
+
+
+section{
+    color: aliceblue;
+    display: flex;
+    width: 100%;
+    flex-grow: 1;
+}
+.main-section{
+    flex-grow: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+}
+.card-holder{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 2;
+    margin: 10px;
+}
+.card-holder a{
+    text-decoration: none;
+}
+.card{
+    background-color: rgb(177, 177, 177);
+    margin:15px;
+    transition: transform 0.2s linear;
+    overflow: hidden;
+}
+.caption{
+    font-family: "barlowCondensed";
+    font-style: normal;
+    font-weight: 400;
+    text-transform: capitalize;
+    color: white;
+    text-align: center;
+    transition: color 0.15s linear;
+}
+.caption:hover{
+    color: rgb(253, 56, 72);
+}
+@media screen and (max-width:800px) {
+    .card-holder{
+        width: 170px;
+    }
+    .card,
+    .cover{
+        width:150px;
+        height:225px;
+        border-radius: 20px;
+    }
+    .card{
+        margin-bottom: -15px;
+    }
+    .card:hover{
+        transform: scale(1.05);
+    }
+    .caption{
+        font-size: 20px;
+    }
+}
+@media screen and (min-width:801px) {
+    .card-holder{
+        width: 370px;
+    }
+    .card,
+    .cover{
+        width:250px;
+        height:375px;
+        border-radius: 40px;
+    }
+    .card{
+        margin-bottom: -20px;
+    }
+    .card:hover{
+        transform: scale(1.05);
+    }
+    .caption{
+        font-size: 30px;
+    }
+}
+
+
+footer{
+    background-color: rgb(29, 29, 29);
+    padding: 5px;
+    font-family: barlowCondensed;
+    font-weight: 300;
+    font-size: 20px;
+    color: rgb(138, 138, 138);
+    text-align: center;
+}
+
+/* SIGNUP.HTML AND SINGIN.HTML STYLING */
+.signing{
+    background-color:rgb(29, 29, 29);
+    width: 450px;
+    height: 450px;
+    margin: 200px auto;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden
+}
+.signing::before{
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 450px;
+    height: 450px;
+    background: linear-gradient(0deg, transparent,
+    rgb(253, 56, 72), rgb(253, 56, 72));
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+}
+.signing::after{
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 450px;
+    height: 450px;
+    background: linear-gradient(0deg, transparent,
+    rgb(253, 56, 72), rgb(253, 56, 72));
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+    animation-delay: -3s;
+}
+.signingUp{
+    background-color:rgb(29, 29, 29);
+    width: 450px;
+    height: 650px;
+    margin: 200px auto;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden
+}
+.signingUp::before{
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 450px;
+    height: 650px;
+    background: linear-gradient(0deg, transparent,
+    rgb(253, 56, 72), rgb(253, 56, 72));
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+}
+.signingUp::after{
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 450px;
+    height: 650px;
+    background: linear-gradient(0deg, transparent,
+    rgb(253, 56, 72), rgb(253, 56, 72));
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+    animation-delay: -3s;
+}
+@keyframes animate{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.form{
+    position: absolute;
+    background-color: rgb(29, 29, 29);
+    inset: 2px;
+    z-index: 10;
+    border-radius: 20px;
+    padding: 30px 40px;
+    display: flex;
+    flex-direction: column;
+}
+h2.sign{
+    font-family: "barlowCondensed";
+    font-style:italic;
+    font-weight: 700;
+    font-size: 40px;
+    margin: 10px auto;
+    text-align: center;
+}
+h2.sign span{
+    color: rgb(253, 56, 72);
+}
+.inputBox{
+    position: relative;
+    width: 300px;
+    margin-top: 35px;
+}
+.inputBox input{
+    position: relative;
+    width: 100%;
+    padding: 20px 10px 10px;
+    background: transparent;
+    border: none;
+    outline: none;
+    color:rgb(255, 255, 255);
+    font-family: "barlowCondensed";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    z-index: 10;
+}
+.inputBox span{
+    position: absolute;
+    left: 0;
+    padding: 20px 0px 10px;
+    font-family: "barlowCondensed";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    pointer-events: none;
+    color:rgb(253, 56, 72);
+    transition: 0.5s;
+}
+.inputBox input:valid ~ span,
+.inputBox input:focus ~ span{
+    color: rgb(107, 107, 107);
+    transform: translateY(-36px);
+    font-size: 20px;
+}
+.inputBox i{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    border-radius: 4px;
+    background-color: rgb(253, 56, 72);
+    z-index: 9;
+    transition: 0.5s;
+    pointer-events: none;
+}
+.inputBox input:valid ~ i,
+.inputBox input:focus ~ i{
+    height: 50px;
+    background-color: rgb(107, 107, 107);
+}
+
+.links{
+    display: flex;
+    justify-content: space-between;
+}
+.links a,
+.linksUp a{
+    margin: 10px 0px;
+    font-family: "barlowCondensed";
+    font-style:normal;
+    font-weight: 300;
+    font-size: 20px;
+    color: rgb(107, 107, 107);
+    text-decoration: none;
+}
+.linksUp a{
+    color: rgb(253, 56, 72);
+    float: right;
+}
+.links a:hover,
+.links a:nth-child(2),
+.linksUp a:hover{
+    color: rgb(253, 56, 72);
+}
+input[type="submit"]{
+    border: none;
+    outline: none;
+    background-color: rgb(253, 56, 72);
+    padding: 10px 10px;
+    width: 100px;
+    margin-top: 20px;
+    border-radius: 4px;
+    font-family: "barlowCondensed";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    cursor: pointer;
+}
+@media screen and (max-width:500px){
+    .signing,
+    .signingUp{
+        width: 350px;
+        margin: 100px auto;
+    }
+    .signing::before{
+        width: 350px;
+    }
+    .signing::after{
+        width: 350px;
+    }
+    .form{
+        padding: 20px 30px;
+    }
+    .inputBox{
+        width: 100%;
+    }
+    .inputBox input{
+        font-size: 20px;
+    }
+    .inputBox span{
+        font-size: 25px;
+    }
+    .inputBox input:valid ~ span,
+    .inputBox input:focus ~ span{
+        font-size: 17px;
+    }
+    .inputBox input:valid ~ i,
+    .inputBox input:focus ~ i{
+        height: 45px;
+    }
+    .links a{
+        font-size: 17px;
+    }
+}
