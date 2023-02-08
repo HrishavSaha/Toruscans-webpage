@@ -27,7 +27,7 @@ const auth = getAuth();
 //     console.log("Error: "+errorMessage);
 //   });
 var name = [];
-const card_img = ["assets/25D Seduction.jpg", "assets/Kiite Kuremasu Yo Ne Senpai.jpg"];
+const card_img = [];
 const cover_link = ["#", "#"];
 var tags = {};
 
@@ -35,6 +35,7 @@ const querySnapshot = await getDocs(collection(db, "Manga"));
 querySnapshot.forEach((doc) => {
     var data = doc.data();
     name.push(data.name);
+    card_img.push(data.coverURI)
     tags[data.name] = data.tags;
 });
 
